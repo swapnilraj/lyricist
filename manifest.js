@@ -39,6 +39,7 @@ const manifest = {
   "permissions": [
     "http://www.azlyrics.com/",
     "https://www.azlyrics.com/",
+    "https://notify.bugsnag.com/*",
   ],
   "content_scripts": [
     {
