@@ -18,6 +18,8 @@ import {
 
 import { createLyricView, clearLyricView } from './views/lyricsView';
 
+import getPrediction from './utils/music_video_detector/detector';
+
 const observer = new MutationObserver(handler(() => {
   clearLyricView();
   fetchLyrics(getMetadata())
@@ -28,3 +30,5 @@ const observer = new MutationObserver(handler(() => {
 }));
 
 observer.observe(document.querySelector(TITLE_SELECTOR), MUTATION_OBSERVER_CONFIG);
+
+getPrediction().then(console.log);
