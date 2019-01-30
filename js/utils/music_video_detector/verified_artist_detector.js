@@ -20,14 +20,17 @@ const OWNER_CONTAINER = '#owner-container';
 /** The prediction is the detector's confidence in saying if the video is a
  * music video. A confidence of 0 signifies that the detector thinks that the
  * video is not a music video.
+ *
+ * If there is an error with the predictor it returns a 0 signifying no
+ * confidence.
  */
-export const getPrediction = async () =>
+export const getPrediction = () =>
   awaitElement(OWNER_CONTAINER)
     .then(ownerContainer =>
       ownerContainer.querySelector(VERIFIED_ARTIST_ICON_SELECTOR))
     .then(musicIcon => {
       if (!musicIcon) throw NO_CONFIDENCE;
       return musicIcon;
-      })
+    })
     .then(_ => VERIFIED_ARTIST_ICON_CONFIDENCE)
     .catch(_ => NO_CONFIDENCE);
