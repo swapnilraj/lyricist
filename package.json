@@ -19,8 +19,9 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "copy-webpack-plugin": "^4.5.1",
-    "jest": "^23.6.0",
+    "cypress": "^3.1.5",
     "eslint": "^5.11.1",
+    "jest": "^23.6.0",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
